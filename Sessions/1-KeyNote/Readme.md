@@ -1,0 +1,4 @@
+Die IT ist im Umbruch, die Cloud auf dem Vormarsch und ausnahmslos alle Unternehmen und IT-Spezialisten sind davon betroffen – ob sie das möchten oder nicht. Welchen Impact die Cloud für Ihr Unternehmen oder Sie persönlich hat kann diese Session natürlich nicht beantworten, aber Marcel Zehner, langjähriger Microsoft MVP und RD, zeigt Ihnen einige wichtige Cloud-Trends auf die Sie als Microsoft IT Professional auf jeden Fall genauer prüfen sollten.
+
+Sprecher: 
+Marcel ist ein langjähriger Microsoft Most Valuable Professional (MVP) und Microsoft Regional Director (RD) und hat einen starken Fokus auf Microsoft-basierte Lösungen im Cloud- und Datacenter-Bereich. Als CTO der itnetX AG – einer Microsoft Elite Partnerin mit Sitzen in der Schweiz und Belgien – zeichnet er sich für die technisch-strategische Ausrichtung verantwortlich. 
