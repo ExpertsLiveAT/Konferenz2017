@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "sagabdemoType": {
+      "type": "string",
+      "defaultValue": "Standard_LRS",
+      "allowedValues": [
+        "Standard_LRS",
+        "Premium_LRS"
+      ]
+    },
+    "department": {
+      "type": "string",
+      "defaultValue": "IT",
+      "allowedValues": [
+        "IT",
+        "DEV",
+        "ENG"
+      ],
+      "metadata": {
+        "description": "Department of resource owner"
+      }
+    },
+    "owner": {
+      "type": "string",
+      "defaultValue": "NotAssigned",
+      "minLength": 6,
+      "metadata": {
+        "description": "Resource owner"
+      }
+    },
+    "costCenter": {
+      "type": "int",
+      "minValue": 10000,
+      "maxValue": 49999,
+      "defaultValue": "14299",
+      "metadata": {
+        "description": "Cost center"
+      }
+    }
+  },
+  "variables": {
+    "sagabdemoName": "[concat('sagabdemo', uniqueString(resourceGroup().id))]"
+  },
+  "resources": [
+    {
+      "name": "[variables('sagabdemoName')]",
+      "type": "Microsoft.Storage/storageAccounts",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2016-01-01",
+      "sku": {
+        "name": "[parameters('sagabdemoType')]"
+      },
+      "dependsOn": [],
+      "tags": {
+        "department": "[parameters('department')]",
+        "owner": "[parameters('owner')]",
+        "costCenter": "[parameters('costCenter')]"
+      },
+      "kind": "Storage"
+    }
+  ],
+  "outputs": {}
+}
